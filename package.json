@@ -1,7 +1,8 @@
 {
-  "name": "status-dogs",
+  "name": "rick-and-morty",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,8 +11,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.15",
     "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.15",
+    "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   }
 }

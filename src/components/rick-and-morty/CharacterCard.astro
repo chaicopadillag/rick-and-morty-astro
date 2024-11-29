@@ -1,0 +1,28 @@
+---
+import type { Character } from '../../types/RickAndMortyTypes';
+
+type Props = Partial<Character> & { isBig?: boolean;};
+
+const { name, species, image,id ,isBig} = Astro.props;
+
+---
+<div class="bg-gray-900 p-4 rounded-lg">
+    <a href={`/character/${id}`}>
+        <img transition:name={`${id}-image`} src={image} alt={name} class:list={[
+            "rounded-lg",
+            isBig ? 'max-w-lg':'w-full'
+        ]}>
+    </a>
+    <h3 class:list={
+        [
+            'p-4',           
+            isBig ? 'text-3xl' :  'text-xl',
+        ]
+    }>{ name }</h3>
+    <p class:list={
+        [
+            'px-4',
+            isBig ? 'text-xl' : 'text-lg',
+        ]
+    }>{ species }</p>
+</div>
